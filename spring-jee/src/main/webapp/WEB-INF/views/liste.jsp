@@ -37,7 +37,7 @@
 				<c:forEach items="${liste}" var="liste">
 					<tr>
 						<td>${liste.user}</td>
-						<td>${liste.taches}</td>
+						<td>${liste.description}</td>
 						<td>${liste.date}</td>
 						
 						

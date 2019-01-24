@@ -32,8 +32,8 @@ public class ListeAFS {
 	}
 	
 	// ajouter liste 
-	public void ajouterListe(String user, String taches, Date date, boolean estEffectuee) {
-		liste.add(new ListeAF(++totalListed,user,taches,date,estEffectuee));
+	public void ajouterListe(String user, String description, Date date, boolean estEffectuee) {
+		liste.add(new ListeAF(++totalListed,user,description,date,estEffectuee));
 	}
 	
 	// supprimer liste 

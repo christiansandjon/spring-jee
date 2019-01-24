@@ -13,7 +13,7 @@
                 <p>Vous pouvez vous inscrire via ce formulaire.</p>
 
                 <label for="login">Login <span class="requis">*</span></label>
-                <input type="text" id="login" name="login" value="" size="20" maxlength="60" />
+                <input type="text" id="login" name="login" value="" maxlength="60" />
                 <br />
 
                 <label for="motdepasse">Mot de passe <span class="requis">*</span></label>

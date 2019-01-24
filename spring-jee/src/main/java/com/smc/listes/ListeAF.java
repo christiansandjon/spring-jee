@@ -2,21 +2,25 @@ package com.smc.listes;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class ListeAF {
 	
 	private int id;
 	private String user; 
-	private String taches; 
+	
+	@Size(min=4, message="Entrez au minimum 4 caractères !")
+	private String description; 
 	private Date date;
 	private boolean estEffectuee;
 	
 	
 	// constructor
-	public ListeAF(int id, String user, String taches, Date date, boolean estEffectuee) {
+	public ListeAF(int id, String user, String description, Date date, boolean estEffectuee) {
 		super();
 		this.id = id;
 		this.user = user;
-		this.taches = taches;
+		this.description = description;
 		this.date = date;
 		this.estEffectuee = estEffectuee;
 	}
@@ -35,11 +39,11 @@ public class ListeAF {
 	public void setUser(String user) {
 		this.user = user;
 	}
-	public String getTaches() {
-		return taches;
+	public String getdescription() {
+		return description;
 	}
-	public void setTaches(String taches) {
-		this.taches = taches;
+	public void setdescription(String description) {
+		this.description = description;
 	}
 	public Date getDate() {
 		return date;
@@ -58,7 +62,7 @@ public class ListeAF {
 	@Override
 	public String toString() {
 		return "Liste à faire : "
-				+ "\nid=" + id + ", \nuser=" + user + ", \ntaches=" + taches + ", \ndate=" + date + ", \nestEffectuee=" + estEffectuee;
+				+ "\nid=" + id + ", \nuser=" + user + ", \ndescription=" + description + ", \ndate=" + date + ", \nestEffectuee=" + estEffectuee;
 	}
 	
 	// unicité 
