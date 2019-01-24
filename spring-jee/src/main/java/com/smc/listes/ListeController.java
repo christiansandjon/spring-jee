@@ -40,8 +40,7 @@ public class ListeController {
 	
 	}
 	
-	// ajouter tache Post 
-	// validation de la taille minimale de caractere dans mon input 
+	// ajouter tache Post + validation de la taille minimale de caractere dans mon input 
 	@RequestMapping(value = "/ajout-liste", method = RequestMethod.POST)
 	public String AjouterTache(@RequestParam String description, 
 			@Valid @ModelAttribute("liste") ListeAF listeAF, 
