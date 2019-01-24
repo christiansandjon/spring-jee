@@ -8,17 +8,17 @@ public class ListeAF {
 	private String user; 
 	private String taches; 
 	private Date date;
-	private boolean isDone;
+	private boolean estEffectuee;
 	
 	
 	// constructor
-	public ListeAF(int id, String user, String taches, Date date, boolean isDone) {
+	public ListeAF(int id, String user, String taches, Date date, boolean estEffectuee) {
 		super();
 		this.id = id;
 		this.user = user;
 		this.taches = taches;
 		this.date = date;
-		this.isDone = isDone;
+		this.estEffectuee = estEffectuee;
 	}
 	
 
@@ -47,18 +47,18 @@ public class ListeAF {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	public boolean isDone() {
-		return isDone;
+	public boolean estEffectuee() {
+		return estEffectuee;
 	}
-	public void setDone(boolean isDone) {
-		this.isDone = isDone;
+	public void setDone(boolean estEffectuee) {
+		this.estEffectuee = estEffectuee;
 	}
 	
 	// tostring
 	@Override
 	public String toString() {
 		return "Liste à faire : "
-				+ "\nid=" + id + ", \nuser=" + user + ", \ntaches=" + taches + ", \ndate=" + date + ", \nisDone=" + isDone;
+				+ "\nid=" + id + ", \nuser=" + user + ", \ntaches=" + taches + ", \ndate=" + date + ", \nestEffectuee=" + estEffectuee;
 	}
 	
 	// unicité 

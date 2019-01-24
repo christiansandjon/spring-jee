@@ -8,24 +8,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Liste des taches</title>
+<link href="webjars/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 	<h1>
 		<font color=blue>${login}</font>
 	</h1>
+	
+	<div class="container">
 	<h1>
-		voici la liste des taches<font color=blue>${login}</font>
+		Voici la liste des taches<font color=blue>${login}</font>
 	</h1>
-
-	<h1>Liste des taches</h1>
-
-	<div>
-		<table>
+	</div>
+	<div class="container">
+<caption>Les taches sont :</caption>
+		<table class="table table-striped">
+		
 			<thead>
 				<tr>
 					<th>Utilisateur</th>
 					<th>Tache</th>
 					<th>Date</th>
+				
 			
 				</tr>
 			</thead>
@@ -35,15 +39,20 @@
 						<td>${liste.user}</td>
 						<td>${liste.taches}</td>
 						<td>${liste.date}</td>
+						
+						
+						<td><a class="btn btn-danger" href="/spring-jee/delete-liste?id=${liste.id}">Supprimer</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
+	<div class="container">
+	<a class="btn btn-success" href="/spring-jee/ajout-liste">Ajouter</a>
+	</div>
 	
-	<a class="Button" href="/spring-jee/ajout-liste">Ajouter</a>
-	<br>
-	<a class="Button" href="/spring-jee/delete-liste">Supprimer</a>
+	<script type="webjars/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<script type="webjars/jquery/3.3.1-1/jquery.min.js"></script>
 
 </body>
 </html>

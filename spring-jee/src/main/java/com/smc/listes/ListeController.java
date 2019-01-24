@@ -17,6 +17,7 @@ public class ListeController {
 	@Autowired
 	ListeAFS listeAFS;
 	
+	// afficher liste 
 	@RequestMapping(value = "/liste", method = RequestMethod.GET)
 	public String AfficherListeTache(Model model) {
 		
@@ -25,22 +26,17 @@ public class ListeController {
 		return "liste";
 	}
 	
+	// ajouter tache get
 	@RequestMapping(value = "/ajout-liste", method = RequestMethod.GET)
-	public String GetAjouterTache() {
+	public String AjouterTache() {
 		
 		return "ajout-liste";
 	
 	}
 	
-	@RequestMapping(value = "/delete-liste", method = RequestMethod.GET)
-	public String GetDeleteTache() {
-		
-		return "delete-liste";
-	
-	}
-	
+	// ajouter tache Post 
 	@RequestMapping(value = "/ajout-liste", method = RequestMethod.POST)
-	public String PostAjoutTache(@RequestParam String taches) {
+	public String AjouterTache(@RequestParam String taches) {
 		
 		listeAFS.ajouterListe("mes eleves", taches, new Date(), false);
 		
@@ -48,8 +44,9 @@ public class ListeController {
 	
 	}
 	
-	@RequestMapping(value = "/delete-liste", method = RequestMethod.POST)
-	public String PostDeleteTache(@RequestParam int id) {
+	// supprimer tache 
+	@RequestMapping(value = "/delete-liste", method = RequestMethod.GET)
+	public String SupprimerTache(@RequestParam int id) {
 		
 		listeAFS.supprimerListe(id);
 		
